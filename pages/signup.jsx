@@ -10,7 +10,7 @@ import Button from "../src/components/inputs/Button";
 import Input from "../src/components/inputs/Input";
 import Menu from "../src/components/menu/Menu";
 
-const FlexboxColumn = styled.div`
+const Column = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,32 +33,29 @@ const Form = styled.form`
 `
 
 
-function LoginPage () {
+function Signup () {
     return (
         <>
-            <Menu>Menuuuuuuu</Menu>
-            <FlexboxColumn>
-                <H1>ACESSAR MINHA CONTA</H1>
+            <Menu></Menu>
+            <Column>
                 <FormContainer>
                     <Card>
-                        <H2>Entrar</H2>
-                        <H3>Por favor, entre na sua conta!</H3>   
-                        <H4>Já tem uma conta Silvia Faria Jóias?</H4> 
+                        <H2>Criar um conta</H2>
+                        <H3>Você pode salvar itens na sua sacola!</H3>  
+                        <H4>Já tem cadrastro? <Link href="/login">Faça o Login</Link></H4>
+
                             <Form>        
+                                <Input Label="Digite Nome" Placeholder="Nome" type="email"/>
+                                <Input Label="Digite Sobrenome" Placeholder="Sobrenome" type="email"/>
                                 <Input Label="Digite Email" Placeholder="Email" type="email"/>
                                 <Input Label="Digite Senha" Placeholder="Senha" type="password"/>
                                 <Button>Entrar</Button>
                             </Form>                                                   
                     </Card>   
-                    <Card> 
-                        <H2>Criar uma conta</H2>
-                        <H3>Economize tempo na hora de finalizar a compra, veja sua sacola de compras e itens salvos a partir de qualquer dispositivo e acesse seu histórico de pedidos.</H3>       
-                        <Link href="/signup"><Button>Registrar</Button></Link>
-                    </Card>  
                 </FormContainer>
-            </FlexboxColumn>
+            </Column>
         </>
     )
 }
 
-export default LoginPage
+export default Signup

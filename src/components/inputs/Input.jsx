@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const InputContainer = styled.div`
-    
+    width: 100%;
 `
 
 const StyledLabel = styled.p`
@@ -16,13 +16,14 @@ const StyledInput = styled.input`
     padding: 15px 20px;
     box-sizing: border-box;
     border-radius: 10px;
+    
 `
 
-function Input ( { Label, ...props } ) {
+function Input ( { Label, Placeholder, ...props } ) {
     return (
         <InputContainer>
             <StyledLabel>{Label}</StyledLabel>
-            <StyledInput placeholder={Label} {...props}/>
+            <StyledInput placeholder={Placeholder} {...props}/>
         </InputContainer>
     )
 }

@@ -1,9 +1,10 @@
+import Menu from "../src/components/menu/Menu"
+
 function HomePage () {
   
   return (
-    <div>
-      Silvia Faria
-    </div>
+    <Menu>
+    </Menu>
   )
 }
 
