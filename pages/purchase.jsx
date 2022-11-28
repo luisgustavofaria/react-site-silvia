@@ -1,6 +1,11 @@
+import Menu from "../src/components/menu/Menu"
+
 function Purchase() {
     return(
-        <div>Purchase</div>
+        <>
+            <Menu></Menu>
+            <div>Purchase</div>
+        </>
     )
 }
 

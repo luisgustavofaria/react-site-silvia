@@ -3,8 +3,10 @@ import Menu from "../src/components/menu/Menu"
 function HomePage () {
   
   return (
-    <Menu>
-    </Menu>
+    <>
+      <Menu>
+      </Menu>
+    </>
   )
 }
 

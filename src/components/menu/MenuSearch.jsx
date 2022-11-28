@@ -42,7 +42,7 @@ const ButtonLogin = styled.button`
 background-color: white;
 color: black;
 text-decoration: none;
-border-radius: 5px;
+border-radius: 10px;
 padding: 0px 10px 0px 10px;
 margin: 6px;
 display: flex;

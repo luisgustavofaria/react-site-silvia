@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    color: #8933CD;
+    color: #f9c731;
     font-weight: bold;
     text-decoration: none;
   }

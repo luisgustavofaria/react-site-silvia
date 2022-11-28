@@ -42,7 +42,7 @@ function Signup () {
                     <Card>
                         <H2>Criar um conta</H2>
                         <H3>Você pode salvar itens na sua sacola!</H3>  
-                        <H4>Já tem cadrastro? <Link href="/login">Faça o Login</Link></H4>
+                        <H4>Já tem cadrastro? <Link href="/login">Faça seu Login</Link></H4>
 
                             <Form>        
                                 <Input Label="Digite Nome" Placeholder="Nome" type="email"/>
