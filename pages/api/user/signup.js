@@ -2,7 +2,7 @@ import Joi from 'joi'
 import createHandler from '../../../lib/middlewares/nextConnect'
 
 import { signupUser } from "../../../modules/user/user.service"
-import validate from '../../../lib/middlewares/validate'
+import validate from '../../../lib/middlewares/validation'
 
 const postSchema = Joi.object({
     firstName: Joi.string().required().max(50),
