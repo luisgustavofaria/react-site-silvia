@@ -1,7 +1,7 @@
 import Joi from 'joi' 
 import createHandler from '../../../lib/middlewares/nextConnect'
 
-import signupUser from "../../../modules/user/user.service"
+import { signupUser } from "../../../modules/user/user.service"
 import validate from '../../../lib/middlewares/validate'
 
 const postSchema = Joi.object({
@@ -14,9 +14,14 @@ const postSchema = Joi.object({
 
 const signup = createHandler()
     
-signup.post(validate({ body: postSchema }), (req, res) => {
-    signupUser(req.body)
-    res.status(200).json({ teste: "okkkkkk" })
+signup.post(validate({ body: postSchema }), async (req, res) => {
+  try {
+    const user = await signupUser(req.body)
+    res.status(201).json(user)
+  } catch (err) {
+    console.error(err)
+    throw err
+  }
 })
 
 export default signup
