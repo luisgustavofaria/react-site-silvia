@@ -58,12 +58,12 @@ function Signup () {
                         <H4>Já tem cadrastro? <Link href="/login">Faça seu Login</Link></H4>
 
                             <Form onSubmit={handleSubmit(handleForm)}>        
-                                <Input Label="Digite Nome" Placeholder="Nome" type="text" {...register('firstName')}/>
-                                <Input Label="Digite Sobrenome" Placeholder="Sobrenome" type="text" {...register('lastName')}/>
-                                <Input Label="Digite Usuario" Placeholder="Usuario" type="text" {...register('user')}/>
-                                <Input Label="Digite Email" Placeholder="Email" type="email" {...register('email')}/>
-                                <Input Label="Digite Senha" Placeholder="Senha" type="password" {...register('password')}/>
-                                <Button type="submit">Cadastrar</Button>
+                                <Input label="Digite Nome" placeholder="Nome" type="text" {...register('firstName')} error={errors.firstName}/>
+                                <Input label="Digite Sobrenome" placeholder="Sobrenome" type="text" {...register('lastName')} error={errors.lastName}/>
+                                <Input label="Digite Usuario" placeholder="Usuario" type="text" {...register('user')} error={errors.user}/>
+                                <Input label="Digite Email" placeholder="Email" type="email" {...register('email')} error={errors.email}/>
+                                <Input label="Digite Senha" placeholder="Senha" type="password" {...register('password')} error={errors.password}/>
+                                <Button type="submit" disabled={Object.keys(errors).length > 0}>Cadastrar</Button>
                             </Form>                                                   
                     </Card>   
                 </FormContainer>

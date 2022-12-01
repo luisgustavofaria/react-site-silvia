@@ -13,18 +13,32 @@ const StyledLabel = styled.p`
 
 const StyledInput = styled.input`
     width: 100%;
-    border: 1px;
+    border: 2px solid black;
     padding: 15px 20px;
     box-sizing: border-box;
-    border-radius: 10px;
+    border-radius: 10px;  
+    background-color: #F5F5F5;
     
+    ${props => props.error && `border: 2px solid red;`}
 `
 
-const Input = forwardRef(({Label, Placeholder, ...props}, ref) => {
+const ErrorLabel = styled.span`
+  color: red;
+  font-weight: bold;
+  font-size: 14px;
+`
+
+const errorMessage = {
+  'string.empty': 'Este campo é obrigatório.',
+  'string.email': 'Por favor, digite um e-mail válido.'
+}
+
+const Input = forwardRef(({label, error, placeholder, ...props}, ref) => {
     return (
         <InputContainer>
-            <StyledLabel>{Label}</StyledLabel>
-            <StyledInput placeholder={Placeholder} {...props} ref={ref}/>
+            <StyledLabel>{label}</StyledLabel>
+            <StyledInput placeholder={placeholder} error={error} {...props} ref={ref}/>
+            {error && <ErrorLabel>{errorMessage[error.type] || error.message}</ErrorLabel>}
         </InputContainer>
     )
 })
