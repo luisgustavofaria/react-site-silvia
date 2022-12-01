@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Link from "next/link";
+import { useState } from "react";
 
 import Card from "../src/components/card/Card";
 import H1 from '../src/components/typography/H1'
@@ -34,6 +35,24 @@ const Form = styled.form`
 
 
 function Signup () {
+
+    const [firstName, setName] = useState('')
+    const [lastName, setLastName] = useState('')
+    const [user, setUser] = useState('')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
+    const handleForm = (e) => {
+        e.preventDefault()
+        console.log({
+            firstName,
+            lastName,
+            user,
+            email,
+            password
+        });
+    }
+
     return (
         <>
             <Menu></Menu>
@@ -44,12 +63,13 @@ function Signup () {
                         <H3>Você pode salvar itens na sua sacola!</H3>  
                         <H4>Já tem cadrastro? <Link href="/login">Faça seu Login</Link></H4>
 
-                            <Form>        
-                                <Input Label="Digite Nome" Placeholder="Nome" type="email"/>
-                                <Input Label="Digite Sobrenome" Placeholder="Sobrenome" type="email"/>
-                                <Input Label="Digite Email" Placeholder="Email" type="email"/>
-                                <Input Label="Digite Senha" Placeholder="Senha" type="password"/>
-                                <Button>Entrar</Button>
+                            <Form onSubmit={handleForm}>        
+                                <Input Label="Digite Nome" Placeholder="Nome" type="text" onChange={(e) => {setName(e.target.value)}}/>
+                                <Input Label="Digite Sobrenome" Placeholder="Sobrenome" type="text" onChange={(e) => {setLastName(e.target.value)}}/>
+                                <Input Label="Digite Usuario" Placeholder="Usuario" type="text" onChange={(e) => {setUser(e.target.value)}}/>
+                                <Input Label="Digite Email" Placeholder="Email" type="email" onChange={(e) => {setEmail(e.target.value)}}/>
+                                <Input Label="Digite Senha" Placeholder="Senha" type="password" onChange={(e) => {setPassword(e.target.value)}}/>
+                                <Button>Cadastrar</Button>
                             </Form>                                                   
                     </Card>   
                 </FormContainer>

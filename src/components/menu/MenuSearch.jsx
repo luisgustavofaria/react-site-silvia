@@ -58,7 +58,7 @@ function MenuSearch() {
             <Form>              
                 <Input placeholder="O que você procura?" type="search" />
                 <ButtonImg>
-                    <img src="/Lupa.png" alt="" srcset="" />
+                    <img src="/Lupa.png"/>
                 </ButtonImg>
             </Form>
             <LoginContainer>
@@ -71,7 +71,7 @@ function MenuSearch() {
                 </Link>
                 <Link href="/purchase">
                     <ButtonLogin>
-                        <img src="/Sacola.png" alt="" srcset="" />0 ITEM
+                        <img src="/Sacola.png"/>0 ITEM
                     </ButtonLogin>
                 </Link>
                 
