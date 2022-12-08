@@ -45,8 +45,8 @@ function LoginPage () {
                         <H3>Por favor, entre na sua conta!</H3>   
                         <H4>Já tem uma conta Silvia Faria Jóias?</H4> 
                             <Form>        
-                                <Input Label="Digite Email" Placeholder="Email" type="email"/>
-                                <Input Label="Digite Senha" Placeholder="Senha" type="password"/>
+                                <Input label="Digite Email" placeholder="Email" type="email"/>
+                                <Input label="Digite Senha" placeholder="Senha" type="password"/>
                                 <Button>Entrar</Button>
                             </Form>                                                   
                     </Card>   
